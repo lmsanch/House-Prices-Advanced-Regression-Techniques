@@ -298,15 +298,11 @@ print('Blend with Top Kernals submissions', datetime.now(),)
 sub_1 = pd.read_csv('final-submission-3.csv')
 sub_2 = pd.read_csv('final-submission-4.csv')
 sub_3 = pd.read_csv('final-submission-5.csv')
-#sub_4 = pd.read_csv('../input/all-you-need-is-pca-lb-0-11421-top-4/submission.csv')
-# sub_5 = pd.read_csv('../input/house-prices-solution-0-107-lb/submission.csv') # fork my kernel again)
 
 submission.iloc[:,1] = np.floor((0.25 * np.floor(np.expm1(blend_models_predict(X_sub)))) + 
                                 (0.25 * sub_1.iloc[:,1]) + 
                                 (0.25 * sub_2.iloc[:,1]) + 
-                                (0.25 * sub_3.iloc[:,1]) 
-                                #(0.15 * sub_4.iloc[:,1])  
-                                #(0.1 * sub_5.iloc[:,1])
+                                (0.25 * sub_3.iloc[:,1])
                                 )
 
 
